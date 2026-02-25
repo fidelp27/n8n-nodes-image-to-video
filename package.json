@@ -14,17 +14,17 @@
     "converter"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/YOUR_USERNAME/n8n-nodes-image-to-video",
+  "homepage": "https://github.com/fidelp27/n8n-nodes-image-to-video",
   "author": {
-    "name": "Your Name",
-    "email": "your@email.com"
+    "name": "Fidel Parabacuto",
+    "email": "fidevp27@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/n8n-nodes-image-to-video.git"
+    "url": "https://github.com/fidelp27/n8n-nodes-image-to-video.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/n8n-nodes-image-to-video/issues"
+    "url": "https://github.com/fidelp27/n8n-nodes-image-to-video/issues"
   },
   "main": "index.js",
   "scripts": {

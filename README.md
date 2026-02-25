@@ -118,7 +118,7 @@ Pull requests are welcome! Please open an issue first to discuss major changes.
 
 ## 📄 License
 
-MIT [EMAIL_ADDRESS]
+MIT [EMAIL_ADDRESS](fidevp27@gmail.com)
 
 ---
 
@@ -127,4 +127,4 @@ MIT [EMAIL_ADDRESS]
 - [npm package](https://www.npmjs.com/package/n8n-nodes-image-to-video)
 - [n8n Community Forum](https://community.n8n.io)
 - [n8n Documentation – Community Nodes](https://docs.n8n.io/integrations/community-nodes/)
-- [Report an Issue](https://github.com/YOUR_USERNAME/n8n-nodes-image-to-video/issues)
+- [Report an Issue](https://github.com/fidelp27/n8n-nodes-image-to-video/issues)
