@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-image-to-video",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "n8n node to convert a static image into a video clip. Supports dynamic sizes, duration, frame rate, and output formats. Perfect for social media Reels, Stories, and video posts.",
   "keywords": [
     "n8n-community-node-package",
