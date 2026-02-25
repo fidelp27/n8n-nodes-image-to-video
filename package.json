@@ -1,0 +1,72 @@
+{
+  "name": "n8n-nodes-image-to-video",
+  "version": "0.1.3",
+  "description": "n8n node to convert a static image into a video clip. Supports dynamic sizes, duration, frame rate, and output formats. Perfect for social media Reels, Stories, and video posts.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "image",
+    "video",
+    "ffmpeg",
+    "reels",
+    "stories",
+    "social-media",
+    "converter"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/YOUR_USERNAME/n8n-nodes-image-to-video",
+  "author": {
+    "name": "Your Name",
+    "email": "your@email.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/n8n-nodes-image-to-video.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/n8n-nodes-image-to-video/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc && npm run copy:icons",
+    "copy:icons": "copyfiles -u 2 \"nodes/**/*.svg\" dist/",
+    "dev": "tsc --watch",
+    "format": "prettier nodes --write",
+    "lint": "eslint nodes --ext .ts",
+    "lintfix": "eslint nodes --ext .ts --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [],
+    "nodes": [
+      "dist/nodes/ImageToVideo/ImageToVideo.node.js"
+    ]
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "sharp": "^0.33.4",
+    "tmp": "^0.2.3"
+  },
+  "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.27",
+    "@types/node": "^20.14.0",
+    "@types/tmp": "^0.2.6",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.57.0",
+    "n8n-workflow": "^1.57.0",
+    "prettier": "^3.3.2",
+    "rimraf": "^5.0.10",
+    "typescript": "^5.5.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

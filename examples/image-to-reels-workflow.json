@@ -1,0 +1,87 @@
+{
+    "name": "Image to Video – Reel Example",
+    "nodes": [
+        {
+            "parameters": {
+                "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1080",
+                "options": {
+                    "response": {
+                        "response": {
+                            "responseFormat": "file",
+                            "outputPropertyName": "data"
+                        }
+                    }
+                }
+            },
+            "id": "6f1c7b2a-1a2b-3c4d-5e6f-7a8b9c0d1e2f",
+            "name": "Fetch Image",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+                240,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "inputBinaryField": "data",
+                "sizePreset": "reel_story",
+                "duration": 8,
+                "fps": 30,
+                "codec": "libx264",
+                "bgColor": "#0a0a0a",
+                "effect": "zoomin",
+                "outputBinaryField": "video"
+            },
+            "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+            "name": "Image to Video",
+            "type": "n8n-nodes-image-to-video.imageToVideo",
+            "typeVersion": 1,
+            "position": [
+                480,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "fileName": "=/tmp/reel_output.mp4",
+                "dataPropertyName": "video"
+            },
+            "id": "b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e",
+            "name": "Save Video",
+            "type": "n8n-nodes-base.writeBinaryFile",
+            "typeVersion": 1,
+            "position": [
+                720,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Fetch Image": {
+            "main": [
+                [
+                    {
+                        "node": "Image to Video",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Image to Video": {
+            "main": [
+                [
+                    {
+                        "node": "Save Video",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "settings": {
+        "executionOrder": "v1"
+    }
+}
