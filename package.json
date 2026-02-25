@@ -29,7 +29,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc && npm run copy:icons",
+    "build": "tsc",
     "dev": "tsc --watch",
     "format": "prettier nodes --write",
     "lint": "eslint nodes --ext .ts",
